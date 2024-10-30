@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WellnessWave</title>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='Assests/Wave.png') }}"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+  </head>
+
+  <body>
+    <div id="nav">
+      <img
+        src="{{ url_for('static', filename='Assests/Wave-removebg-preview.png') }}"
+        alt="WellnessWave Logo"
+      />
+      <h4><a href="{{ url_for('mental_health') }}">Mental Health</a></h4>
+      <h4><a href="{{ url_for('face_recognition') }}">Facial Expression</a></h4>
+      <h4>Fitness Tracking</h4>
+      <h4>Wellness Insights</h4>
+      <h4>Our Team</h4>
+    </div>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <video autoplay loop muted src="{{ url_for('static', filename='Assests/vid1.mp4') }}"></video>
+    
+    <div id="main">
+      <div id="page1">
+        <h1>HEAL. GROW. THRIVE.</h1>
+        <h2>WELCOME TO WELLNESSWAVE!</h2>
+        <p>
+          WellnessWave combines AI-driven analytics and personalized wellness plans
+          to help you live a healthier life. From mental health support to nutrition
+          and fitness tracking, we use technology to give you actionable insights.
+        </p>
+        <div id="arrow">
+          <i class="ri-arrow-down-line"></i>
+        </div>
+      </div>
+
+      <div id="page2">
+        <div id="scroller">
+          <div id="scroller-in">
+            <h4>Mental Health</h4>
+            <h4>Nutrition Plans</h4>
+            <h4>Fitness Tracking</h4>
+            <h4>Wellness Insights</h4>
+            <h4>Our Team</h4>
+          </div>
+          <div id="scroller-in">
+            <h4>Mental Health</h4>
+            <h4>Nutrition Plans</h4>
+            <h4>Fitness Tracking</h4>
+            <h4>Wellness Insights</h4>
+            <h4>Our Team</h4>
+          </div>
+        </div>
+        <div id="about-us">
+          <img src="{{ url_for('static', filename='Assests/About us cover 2.avif') }}" alt="" />
+          <div id="about-us-in">
+            <h3>ABOUT US</h3>
+            <p>
+              WellnessWave is a cutting-edge wellness platform powered by AI and 
+              machine learning. We offer personalized wellness insights, mental 
+              health resources, and tracking tools for your holistic well-being. 
+              Whether it's your nutrition or fitness journey, our platform empowers 
+              you to take control of your health.
+            </p>
+          </div>
+          <img src="{{ url_for('static', filename='Assests/About ussss.jpg') }}" alt="" />
+        </div>
+
+        <div id="cards-container">
+          <div class="card" id="card1">
+            <div class="overlay">
+              <h4>Mental Health</h4>
+              <p>
+                Use AI-driven mental health assessments to understand your mood patterns 
+                and receive support based on your unique psychological profile.
+              </p>
+            </div>
+          </div>
+          <div class="card" id="card2">
+            <div class="overlay">
+              <h4>Nutrition Plans</h4>
+              <p>
+                Personalized AI-powered nutrition plans based on your health goals and 
+                lifestyle preferences, ensuring that you fuel your body the right way.
+              </p>
+            </div>
+          </div>
+          <div class="card" id="card3">
+            <div class="overlay">
+              <h4>Fitness Tracking</h4>
+              <p>
+                Track your physical activity with intelligent data analysis to help you 
+                reach your fitness goals faster, and stay consistent with actionable insights.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="green-div">
+          <img src="{{ url_for('static', filename='Assests/27.png') }}" alt="" />
+          <h4>
+            SIGN UP FOR WELLNESSWAVE NEWS AND SPECIAL INSIGHTS STRAIGHT TO YOUR INBOX
+          </h4>
+          <img src="{{ url_for('static', filename='Assests/26.png') }}" alt="" />
+        </div>
+      </div>
+
+      <div id="page3">
+        <p>
+          "WellnessWave has transformed my wellness journey. With personalized insights 
+          and easy tracking, I now feel more in control of my mental and physical health."
+        </p>
+        <img id="colon1" src="{{ url_for('static', filename='Assests/path-to-quote-left-image.svg') }}" alt="" />
+        <img id="colon2" src="{{ url_for('static', filename='Assests/path-to-quote-right-image.svg') }}" alt="" />
+      </div>
+
+      <div id="page4">
+        <h1>CONTROL YOUR HEALTH?</h1>
+        <div class="elem">
+          <h2><a href="{{ url_for('mental_health') }}">Mental Health Support</a></h2>
+          <img src="{{ url_for('static', filename='Assests/blur.png') }}" alt="" />
+        </div>
+        <div class="elem">
+          <h2><a href="{{ url_for('face_recognition') }}">Face Mood Swings</a></h2>
+
+          <img src="{{ url_for('static', filename='Assests/blur.png') }}" alt="" />
+        </div>
+        <div class="elem">
+          <h2>Fitness Tracking</h2>
+          <img src="{{ url_for('static', filename='Assests/blur.png') }}" alt="" />
+        </div>
+      </div>
+
+      <div id="footer">
+        <img src="{{ url_for('static', filename='Assests/path-to-dots-footer-image.svg') }}" alt="" />
+        <div id="f1">
+          <img src="{{ url_for('static', filename='Assests/path-to-wellnesswave-logo-white.svg') }}" alt="" />
+        </div>
+        <div id="f2">
+          <h3>Mental Health</h3>
+          <h3>Nutrition Plans</h3>
+          <h3>Fitness Tracking</h3>
+        </div>
+        <div id="f3">
+          <h3>Wellness Insights</h3>
+          <h3>Our Team</h3>
+          <h3>Contact Us</h3>
+        </div>
+        <div id="f4">
+          <h4>
+            123 WELLNESS ST <br />
+            HEALTHCITY <br />
+            WELLNESSVILLE <br />
+            PHONE: 123-456-7890 <br />
+            GET DIRECTIONS <br />
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

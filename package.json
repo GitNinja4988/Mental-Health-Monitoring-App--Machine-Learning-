@@ -1,0 +1,16 @@
+{
+  "name": "ml-final-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "locomotive-scroll": "^4.1.4"
+  },
+  "description": ""
+}

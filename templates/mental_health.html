@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellnessWave</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mental_health.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.0/locomotive-scroll.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">WellnessWave</div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>
+                A HOLISTIC APPROACH TO<br>
+                <em>WELL-BEING AND MINDFULNESS</em><br>
+                FOR A HEALTHIER YOU<br>
+                <strong>BODY, MIND, AND SOUL</strong>
+            </h1>
+        </div>
+    </section>
+
+    <!-- Page 2 Section -->
+    <div id="page2">
+        <div class="elem1" data-img="https://neuro.wharton.upenn.edu/wp-content/uploads/2020/04/iStock-Blog2-e1585773724832.jpg">
+            <h2>Mindfulness</h2>
+            <div class="moving">
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Mindfulness</h5>
+                    <h5>Breathwork</h5>
+                    <h5>Journaling</h5>
+                    <h5>Imagery</h5>
+                </div>
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Detox</h5>
+                    <h5>Connection</h5>
+                    <h5>Growth</h5>
+                    <h5>Stress</h5>
+                </div>
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Resilience</h5>
+                    <h5>Wellness</h5>
+                    <h5>Awareness</h5>
+                </div>
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Healing</h5>
+                    <h5>Focus</h5>
+                    <h5>Harmony</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="elem1" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzyZp13QhpMM8UQUlxdRt0LbQcXEBcShPbHA&s">
+            <h2>Balance</h2>
+            <div class="moving">
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Customized Fitness Regimens</h5>
+                    <h5>Dietary Consultations</h5>
+                    <h5>Emotional Wellness Strategies</h5>
+                    <h5>Goal Setting and Tracking</h5>
+                </div>
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Community Support Groups</h5>
+                    <h5>Virtual Wellness Check-ins</h5>
+                    <h5>Personalized Journaling</h5>
+                    <h5>Mindfulness Challenges</h5>
+                </div>
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>One-on-One Coaching</h5>
+                    <h5>Workshops on Resilience</h5>
+                    <h5>Feedback and Adjustment</h5>
+                    <h5>Inspiration and Motivation</h5>
+                </div>
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Seasonal Detox Programs</h5>
+                    <h5>Wellness Retreats</h5>
+                    <h5>Holistic Health Assessments</h5>
+                    <h5>Stress Reduction Plans</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="elem1" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqMCLLIpdJUUoes-_Iqw6ljpatg88fRWnXeQ&s">
+            <h2>Wellness Workshops</h2>
+            <div class="moving">
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Meditation & Mindfulness</h5>
+                    <h5>Nutrition for Vitality</h5>
+                    <h5>Yoga for Every Body</h5>
+                    <h5>Creative Expression</h5>
+                </div>
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Art Therapy</h5>
+                    <h5>Fitness for Beginners</h5>
+                    <h5>Holistic Health Practices</h5>
+                    <h5>Building Healthy Relationships</h5>
+                </div>
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Mindfulness in Daily Life</h5>
+                    <h5>Stress Management</h5>
+                    <h5>Breathwork & Relaxation</h5>
+                    <h5>Nature Immersion Sessions</h5>
+                </div>
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Self-Care Rituals</h5>
+                    <h5>Detoxifying Your Mind</h5>
+                    <h5>Vision Board Creation</h5>
+                    <h5>Gratitude Practices</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="elem1" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKwecNAn-1E2gVnD20KzkzF6nw9n7iqUNDGw&s">
+            <h2>Healing</h2>
+            <div class="moving">
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Support Circles</h5>
+                    <h5>Online Group Classes</h5>
+                    <h5>Wellness Challenges</h5>
+                    <h5>Shared Experiences</h5>
+                </div>
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Networking Opportunities</h5>
+                    <h5>Monthly Wellness Events</h5>
+                    <h5>Peer Coaching</h5>
+                    <h5>Community Service Projects</h5>
+                </div>
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Inspirational Speakers</h5>
+                    <h5>Resource Sharing</h5>
+                    <h5>Community Potlucks</h5>
+                    <h5>Wellness Book Club</h5>
+                </div>
+                <div class="moving-in">
+                    <div class="blur"></div>
+                    <h5>Online Forums</h5>
+                    <h5>Collaborations</h5>
+                    <h5>Family Wellness Activities</h5>
+                    <h5>Seasonal Celebrations</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section id="mental-health">
+        <h1 class="main-title">Mental Health Prediction</h1>
+        <div class="email-container">
+            <form id="prediction-form" method="POST" action="/mental_health">
+                <div class="input-wrapper">
+                    <input type="text" name="input_field" placeholder="How are you feeling?" required>
+                    <button type="submit">
+                        <span class="arrow">→</span>
+                    </button>
+                </div>
+            </form>
+            
+            <!-- Loading message -->
+            <div id="loading" style="display: none;">Loading...</div>
+            
+            <!-- Analyzing message -->
+            <div id="analyzing" style="display: none;">Analyzing...</div>
+            
+            <!-- Display the prediction result -->
+            <div id="prediction-result" class="prediction-result" style="display: none;">
+                <h2 class="sentiment-title">Your Sentiment: <span id="sentiment-output"></span></h2>
+                <h3 class="activity-title">Suggested Activity: <span id="activity-output"></span></h3>
+                <div id="emoji-output"></div>
+            </div>
+    
+            <!-- Canvas for fireworks -->
+            <canvas id="fireworks" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></canvas>
+        </div>
+    </section>
+    
+    
+    
+    
+    <!-- JavaScript for additional functionality -->
+     
+    <script src="{{ url_for('static', filename='mental_health.js') }}"></script>
+</body>
+</html>

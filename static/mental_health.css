@@ -1,0 +1,395 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables */
+:root {
+    --primary-bg-color: #100f0f; /* Dark background */
+    --header-bg-color: transparent;
+    --header-color: #fff; /* White color for header text */
+    --highlight-color: #f5d907; /* Bright yellow */
+    --hover-color: #ff3366; /* Hover color for links */
+    --text-color: white; /* Default text color */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-bg-color);
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--header-color);
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    margin-left: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--header-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+header ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background-color: var(--highlight-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Set to 0 for full width */
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center;    /* Center items horizontally */
+}
+
+.hero-content h1 {
+    font-size: 5vw;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #000;
+}
+
+.hero-content h1 em {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.hero-content h1 strong {
+    font-weight: 700;
+}
+
+/* Page 2 */
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: rgb(234, 237, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0; /* Adjust padding as necessary */
+}
+
+/* Element container on page 2 */
+.elem1 {
+    width: 100%; /* Ensure full width */
+    position: relative;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    flex-direction: column; /* Stack children vertically */
+    height: 100%; /* Allow full height */
+}
+
+/* Typography inside .elem */
+.elem1 h2 {
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    position: relative;
+    z-index: 9;
+    text-align: center; /* Center text alignment */
+}
+
+/* Moving text container */
+.elem1 .moving {
+    background-color: var(--highlight-color);
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    padding: 10px 0; /* Ensures that content stays within the container */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+.elem1 .moving .moving-in {
+    display: inline-flex; /* Change to inline-flex to enable spacing */
+    white-space: nowrap;
+    animation-name: moving;
+    animation-duration: 2.9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* Text inside the moving element */
+.elem1 .moving .moving-in h5 {
+    color: #000;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Gilroy', sans-serif; /* Ensure 'Gilroy' is properly imported */
+    text-transform: uppercase;
+    margin-right: 35px; /* Space between moving items */
+}
+
+/* Add more space for the last item */
+.elem1 .moving .moving-in h5:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+}
+
+/* Show moving animation on h2 hover */
+.elem1 h2:hover + .moving {
+    opacity: 1; /* Make moving visible */
+}
+
+.elem1:hover h2 { /* Fix selector */
+    font-style: italic; /* Make the h2 italic on hover */
+}
+
+.yellow-line {
+    height: 2px;
+    background-color: yellow;
+    position: absolute; /* or relative depending on your layout */
+    bottom: 0; /* adjust according to your design */
+    transition: width 0.4s ease;
+}
+
+#display-image {
+    transition: opacity 0.3s ease;
+}
+
+/* Animation Keyframes */
+@keyframes moving {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    header ul li {
+        margin-left: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 8vw; /* Adjust font size for smaller screens */
+    }
+
+    .elem1 h2 {
+        font-size: 10vw; /* Make the h2 responsive */
+    }
+}
+
+
+@keyframes backgroundChange {
+    0% { 
+        background: linear-gradient(135deg, #ff7e5f, #feb47b); 
+        background-position: 0% 50%; 
+    }
+    50% { 
+        background: linear-gradient(135deg, #ff7e5f, #feb47b); 
+        background-position: 100% 50%; 
+    }
+    100% { 
+        background: linear-gradient(135deg, #ff7e5f, #feb47b); 
+        background-position: 0% 50%; 
+    }
+}
+
+#mental-health {
+    animation: backgroundChange 10s ease infinite; /* Animation for background change */
+    background: linear-gradient(135deg, #254db4, #91c118); /* Initial background */
+    background-size: 200% 200%; /* Ensures smooth transitions */
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 40px 20px;
+    font-family: 'Gilroy', sans-serif;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers elements vertically */
+}
+
+
+/* Updated gradient for input-wrapper */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, #2fff00, #ee9ca7, #b1a908, #ffb6c1);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    max-width: 600px;  /* Restrict the width of the input box */
+    margin: 0 auto;  /* Center horizontally */
+}
+
+/* Gradient animation for input-wrapper */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.input-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 5px 10px rgba(0, 0, 0, 0.1), 
+        10px 10px 20px rgba(0, 0, 0, 0.1), 
+        20px 20px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Increased height for the input field */
+input[type="text"] {
+    flex: 1;
+    padding: 20px 25px;  /* Balanced padding for medium size */
+    font-size: 1.4em; /* Bigger font for medium size */
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #141412;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover .arrow {
+    transform: translateX(10px) rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+/* Larger arrow size */
+.arrow {
+    font-size: 2em;
+    transition: transform 0.3s ease;
+}
+
+/* Add some heading and paragraph styles */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #1a0a0a;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #160707;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    input[type="text"] {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 15px;
+    }
+
+    .arrow {
+        font-size: 1.5em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+.falling-emoji {
+    position: absolute;
+    font-size: 24px;
+    opacity: 1;
+    pointer-events: none; /* Ignore mouse events */
+}
+
+#analyzing {
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold; /* Make text bold */
+    color: #0a0c0f; /* Choose a color that contrasts well */
+    margin: 20px 0; /* Add some margin for spacing */
+    display: none; /* Initially hidden */
+}
+
+.main-title {
+    font-size: 2.5em; /* Adjust size as needed */
+    font-weight: bold;
+    background: black; /* Example gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px; /* Spacing below the title */
+}
+
+.sentiment-title {
+    font-size: 2em; /* Adjust size as needed */
+    font-weight: 800; /* Heavily bold */
+    background: rgb(15, 13, 15); /* Example gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px; /* Spacing below the sentiment */
+}
+
+.activity-title {
+    font-size: 1.5em; /* Adjust size as needed */
+    font-weight: 700; /* Bold */
+    background: rgb(17, 17, 17); /* Example gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

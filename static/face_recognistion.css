@@ -1,0 +1,320 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables */
+:root {
+    --primary-bg-color: #100f0f; /* Dark background */
+    --header-bg-color: transparent;
+    --header-color: #fff; /* White color for header text */
+    --highlight-color: #f5d907; /* Bright yellow */
+    --hover-color: #ff3366; /* Hover color for links */
+    --text-color: white; /* Default text color */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+
+
+/* Header and Navigation */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-bg-color);
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-bg-color);
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    margin-left: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--header-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+header ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background-color: var(--highlight-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center;    /* Center items horizontally */
+}
+
+.hero-content h1 {
+    font-size: 5vw;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #000;
+}
+
+.hero-content h1 em {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.hero-content h1 strong {
+    font-weight: 700;
+}
+
+/* Page 2 */
+#page2 {
+    height: 120vh;
+    width: 100%;
+    background-color: black;
+    color: rgb(234, 237, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0; /* Adjust padding as necessary */
+}
+
+/* Element container on page 2 */
+.elem1 {
+    width: 100%; /* Ensure full width */
+    position: relative; /* Set to relative for absolute positioning of elements */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    flex-direction: column; /* Stack children vertically */
+    height: 100%; /* Allow full height */
+}
+
+/* Typography inside .elem */
+.elem1 h2 {
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    position: relative; /* Position relative for the line to center below it */
+    z-index: 8;
+    text-align: center; /* Center text alignment */
+}
+
+/* Running Line Styling */
+.yellow-line {
+    position: center; /* Position absolutely within .elem1 */
+    height: 2px; /* Height of the line */
+    width: 80%; /* Adjust width as necessary */
+    background-color: yellow; /* Set color of the line */
+    bottom: 0; /* Align with the bottom of the h2 */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center the line */
+    transition: width 0.4s ease; /* Optional: smooth transition on hover */
+}
+
+/* Moving text container */
+.elem1 .moving {
+    background-color: var(--highlight-color);
+    white-space: nowrap;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    padding: 10px 0; /* Ensures that content stays within the container */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+.elem1 .moving .moving-in {
+    display: inline-flex; /* Change to inline-flex to enable spacing */
+    white-space: nowrap;
+    animation-name: moving;
+    animation-duration: 2.9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* Text inside the moving element */
+.elem1 .moving .moving-in h5 {
+    color: #000;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Gilroy', sans-serif; /* Ensure 'Gilroy' is properly imported */
+    text-transform: uppercase;
+    margin-right: 35px; /* Space between moving items */
+}
+
+/* Add more space for the last item */
+.elem1 .moving .moving-in h5:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+}
+
+/* Show moving animation on h2 hover */
+.elem1 h2:hover + .moving {
+    opacity: 1; /* Make moving visible */
+}
+
+.elem1:hover h2 { /* Fix selector */
+    font-style: italic; /* Make the h2 italic on hover */
+}
+
+#display-image {
+    transition: opacity 0.3s ease;
+}
+
+/* Animation Keyframes */
+@keyframes moving {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Section 3 */
+#faceModels {
+    height: auto; /* Adjust to fit content */
+    width: 100%;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 40px; /* Increase padding for a more spacious feel */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 40px; /* Add gap between the heading and content */
+}
+
+/* Align cards in a column with more space */
+.face-models-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Increase gap between cards */
+    width: 80%; /* Set width to 80% of the section */
+    max-width: 1200px; /* Limit maximum width for large screens */
+    margin: 0 auto; /* Center align the content */
+}
+
+/* Styles for Live Emotion Detection Card */
+.live-model {
+    background: linear-gradient(135deg, #26a1da, #a1a82870);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+    padding: 50px; /* Increase padding for more spacing inside the card */
+    border-radius: 15px; /* Slightly larger border-radius for a softer look */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Increase shadow for depth */
+    color: rgb(22, 4, 4);
+    min-height: 320px; /* Slightly taller minimum height */
+    width: 100%; /* Use full width of .face-models-content */
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+/* Styles for Captured Expressions Card */
+.captured-model {
+    background: linear-gradient(135deg, #d7d70e, #18c1b6);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+    padding: 50px; /* Increase padding for more spacing inside the card */
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    color: rgb(35, 22, 22);
+    min-height: 320px;
+    width: 100%;
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Spacing and styling for headings */
+h2 {
+    text-align: center;
+    margin-bottom: 40px; /* Add space below main heading */
+    font-size: 2em; /* Increase font size for emphasis */
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 20px; /* Add space below sub-headings */
+}
+
+/* Button styling with more space */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px; /* Increase padding for larger button size */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px; /* Increase font size */
+    margin: 8px 4px; /* Add extra margin around buttons */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Result display area styling */
+#liveResult, #captureResult {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
