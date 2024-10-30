@@ -1,4 +1,4 @@
-# Wellness Wave
+# Wellness Wave 🌱
 
 **Wellness Wave** is an innovative web application designed to promote holistic well-being and mindfulness. Utilizing cutting-edge technologies such as facial recognition and natural language processing, this application offers a comprehensive approach to managing mental and emotional health.
 
